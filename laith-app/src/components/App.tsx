@@ -1,6 +1,7 @@
 import './App.css'
 import Charactes from './Characters'
 import { QueryClientProvider, QueryClient } from 'react-query'
+import { ReactQueryDevtools } from 'react-query/devtools'
 
 const queryClient = new QueryClient()
 
@@ -11,6 +12,7 @@ function App() {
         <h1>Rick and Morty</h1>
         <QueryClientProvider client={queryClient}>
           <Charactes />
+          <ReactQueryDevtools initialIsOpen={false} />
         </QueryClientProvider>
       </div>
     </div>
